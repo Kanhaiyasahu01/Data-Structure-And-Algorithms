@@ -1,0 +1,31 @@
+Before discussing sliding window technique, let's assume if you need to traverse a array one element at a time, how will you do it?
+
+Something like this:
+
+if array = {1,2,3,4,5}
+The traversal sequence will look like 
+the highlighted element at each step:
+
+step 1: {1,2,3,4,5} - 1
+step 2: {1,2,3,4,5} - 2 
+step 3: {1,2,3,4,5} - 3 
+step 4: {1,2,3,4,5} - 4
+step 5: {1,2,3,4,5} - 5
+But as the name suggest, in case of sliding window, instead of traversing the array 1 by 1, we would traverse a block of size K in the first step, and then simply shift the block ahead by one position at each step. You can visualise this as a sliding glass pane of a window frame. That's why it is called sliding window.
+
+For Example:
+
+if array = {1,2,3,4,5}, and K = 2
+The traversal sequence of sliding a 
+window by size 2 would look like:
+
+step 1: {1,2,3,4,5}
+step 2: {1,2,3,4,5}
+step 3: {1,2,3,4,5}
+step 4: {1,2,3,4,5}
+What is the benefit of using sliding window technique?
+Before we discuss the benefit, can you spot the difference between the above two examples?
+
+The difference is in the number of steps. In the first example of traditional traversal, there are 5 steps whereas in the second one, we just have 4 steps.
+
+Although it doesn't make a lot of sense in the above example as the time complexity would be same, but in a lot of problems, sliding window techniques helps us to remove using nested loop by replacing it with a single loop, there by dramatically reducing the time complexity.
