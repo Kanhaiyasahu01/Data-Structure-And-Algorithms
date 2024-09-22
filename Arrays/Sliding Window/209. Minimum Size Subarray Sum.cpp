@@ -1,6 +1,11 @@
-class Solution {
-public:
-    int minSubArrayLen(int target, vector<int>& nums) {
+// https://leetcode.com/problems/minimum-size-subarray-sum/
+
+// note:Just write the minSubArrayLen Function in your leetcode
+
+#include<bits/stdc++.h>
+#include<vector>
+using namespace std;
+int minSubArrayLen(int target, vector<int>& nums) {
         int n=nums.size();
         int l=0,r=0;
         int sum =0; 
@@ -26,4 +31,11 @@ public:
 
         return minLength;
     }
-};
+
+
+
+int main(){
+    vector<int> arr(10,1);
+    minSubArrayLen(10,arr);
+    return 0;
+}
